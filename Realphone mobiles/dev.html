@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dev.css">
+    <title>Real Phone</title>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src= "logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+     <div class="info">
+        <div class="egg"></div>
+        <img src="mobile.png" class="mobile">
+
+         <div id="circ">
+            <div class="func one">
+                <img src="camera.png">
+                <div>
+                    <h1>Camera</h1>
+                    <a>12mp, AI Real camera</a>
+                </div>
+            </div>
+         <div class="func two">
+            <img src="processor.png">
+            <div>
+                <h1>Processor</h1>
+                <a>Snapdragon 680</a>
+            </div>
+         </div>
+         <div class="func three">
+            <img src="battery.png">
+            <div>
+                <h1>Battery</h1>
+                <a>5000 mah Lithium-ion battery</a>
+            </div>
+         </div>
+           <div class="func four">
+            <img src="display.png">
+            <div>
+            <h1>Display</h1>
+            <p>6'2 AMOLED display</p></div>
+           </div>
+         </div>
+            
+      </div>
+        <div class="control">
+            <img src="arrow.png" id="Upbtn">
+            <h3>features</h3>
+            <img src="arrow.png" id="Downbtn">
+        </div>
+        
+    </div>
+    <script>
+        var circ = document.getElementById("circ");
+        var Upbtn = document.getElementById("Upbtn");
+        var Downbtn = document.getElementById("Downbtn");
+
+        var rotateValue = circ.style.transform;
+        var rotateSum;
+
+        Upbtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circ.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        Downbtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circ.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+    
+</body>
+</html>
